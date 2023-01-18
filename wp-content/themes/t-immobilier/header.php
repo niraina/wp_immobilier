@@ -8,12 +8,17 @@
     <title>Document</title>
     <?php wp_head(); ?>
 </head>
-
+<?php
+$_template_path = get_template_directory_uri();
+$_template_path = parse_url($_template_path, PHP_URL_PATH);
+?>
 <body>
-    <header>
+    <header class="header-immobilier">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="<?= $_template_path; ?> ./assets/img/logo.png" alt="">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -21,13 +26,20 @@
                     <?php wp_nav_menu([
                             'theme_location' => 'header',
                             'container' => false,
-                            'menu_class' => 'navbar-nav me-auto mb-2 mb-lg-0',
+                            'menu_class' => 'navbar-nav me-auto ms-auto',
                         ])  
                     ?>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    <div class="partenaire d-flex">
+                        <p>Vous êtes propriétaire?</p>
+                        <div class="switch_langue ">
+                            <a href="#">
+                                <img src="<?= $_template_path; ?> ./assets/img/fr.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="<?= $_template_path; ?> ./assets/img/en.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
