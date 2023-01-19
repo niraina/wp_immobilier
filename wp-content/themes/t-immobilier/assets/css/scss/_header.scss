@@ -1,0 +1,38 @@
+.header-immobilier{
+   background: $white; 
+   .navbar{
+    background: $white !important;
+    box-shadow: 0px 3px 4px rgba(237, 237, 237, 0.8);
+    .nav-item{
+        padding: 20px 35px 0;
+        &.current-menu-item, &.active {
+            color: $orange !important;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            a{
+                color: $orange !important;
+            }
+        }
+        a{
+            transition: all 0.3s ease-in-out;
+            &:hover, &.active {
+                color: $orange !important;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+   }
+   .partenaire{
+    margin-top: 20px;
+    p{
+        margin: 0;
+    }
+    .switch_langue{
+        margin-left: 16px;
+        a{
+            text-decoration: none;
+            margin-left: 8px;
+        }
+    }
+   }
+}
