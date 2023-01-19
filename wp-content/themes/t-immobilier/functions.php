@@ -5,6 +5,7 @@ function theme_supports()
 {
     add_theme_support('menus');
     register_nav_menu('header', 'Menu principale');
+    add_theme_support( 'woocommerce');
 }
 
 function theme_menu_class($_classes){
